@@ -29,39 +29,48 @@ class CustomerForm extends Component {
         e.preventDefault();
         // get our form data out of state
         const { fname, lname, email } = this.state;
-
-        axios.post('/', { fname, lname, email })
-          .then((result) => {
-            //access the results here....
-        });
+        alert("hello world")
+        fetch("person/",{
+            method: 'POST',
+            body: {
+                "firstName": fname,
+                "lastName": lname
+            },
+            headers: {"Content-Type": "application/json"}
+          })
+          .then(function(response){
+            return response.json()
+          }).then(function(body){
+            console.log(body);
+          });
     }
 
       render() {
         const { fname, lname, email } = this.state;
         return (
           <form>
-            <label id="fname-label">First name:</label><br/>
+            <label id="fname-label">First name:</label>
             <input
               type="text"
               name="fname"
               value={fname}
               onChange={this.onChange}
             /><br />
-            <label id="lname-label">Last name:</label><br/>
+            <label id="lname-label">Last name:</label>
             <input
               type="text"
               name="lname"
               value={lname}
               onChange={this.onChange}
             /><br />
-            <label id="email-label">Email:</label><br/>
+            <label id="email-label">Email:</label>
             <input
               type="text"
               name="email"
               value={email}
               onChange={this.onChange}
-            />
-            <button type="submit">Submit</button>
+            /><br/>
+            <button type="submit" onClick={this.onSubmit}>Submit</button>
           </form>
         );
       }
