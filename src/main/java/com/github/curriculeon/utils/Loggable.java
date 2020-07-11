@@ -9,4 +9,8 @@ public interface Loggable {
     default Logger getLogger() {
         return Logger.getLogger(getClass().getName());
     }
+
+    default void log(String info, Object... args) {
+        getLogger().info(String.format(info, args));
+    }
 }

@@ -29,20 +29,18 @@ class CustomerForm extends Component {
         e.preventDefault();
         // get our form data out of state
         const { fname, lname, email } = this.state;
-        alert("hello world")
-        fetch("person/",{
+        const request = {
             method: 'POST',
             body: {
                 "firstName": fname,
                 "lastName": lname
             },
             headers: {"Content-Type": "application/json"}
-          })
-          .then(function(response){
-            return response.json()
-          }).then(function(body){
-            console.log(body);
-          });
+        };
+        alert("Request = " + JSON.stringify(request));
+        fetch("person/", request)
+            .then((res) => res.json())
+            .then((body)=> console.log(body));
     }
 
       render() {
