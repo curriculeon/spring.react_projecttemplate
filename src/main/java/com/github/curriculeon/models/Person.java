@@ -1,13 +1,15 @@
 package com.github.curriculeon.models;
 
 
+import com.github.curriculeon.utils.Jsonable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Person {
+public class Person implements Jsonable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;

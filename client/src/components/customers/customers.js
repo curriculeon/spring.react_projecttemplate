@@ -18,7 +18,7 @@ class Customers extends Component {
 
     render() {
         return (
-            <div>
+            <div id="customer-list">
                 <h2>Customers</h2>
                 <ul>{ this.state.customers.map(customer =>
                     <li key={customer.id}>
