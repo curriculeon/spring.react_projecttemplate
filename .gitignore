@@ -1,6 +1,9 @@
 
 # Created by https://www.toptal.com/developers/gitignore/api/node,reactnative,visualstudiocode,intellij,notepadpp,sublimetext,java,angular
 # Edit at https://www.toptal.com/developers/gitignore?templates=node,reactnative,visualstudiocode,intellij,notepadpp,sublimetext,java,angular
+target/
+target
+target/*
 
 ### Angular ###
 ## Angular ##
