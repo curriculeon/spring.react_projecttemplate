@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Customers from './components/customers/customers';
 import CustomerForm from './components/customer-form/customer-form';

@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import axios from 'axios';
 import './customer-form.css';
 
 class CustomerForm extends Component {
@@ -11,7 +10,6 @@ class CustomerForm extends Component {
         this.state = {
           fname: '',
           lname: '',
-          email: '',
         };
       }
 
@@ -28,7 +26,7 @@ class CustomerForm extends Component {
     onSubmit = (e) => {
         e.preventDefault();
         // get our form data out of state
-        const { fname, lname, email } = this.state;
+        const { fname, lname } = this.state;
         const request = {
             method: 'POST',
             body: JSON.stringify({
@@ -60,13 +58,6 @@ class CustomerForm extends Component {
               value={lname}
               onChange={this.onChange}
             /><br />
-            <label id="email-label">Email:</label>
-            <input
-              type="text"
-              name="email"
-              value={email}
-              onChange={this.onChange}
-            /><br/>
             <button type="submit" onClick={this.onSubmit}>Submit</button>
           </form>
         );
