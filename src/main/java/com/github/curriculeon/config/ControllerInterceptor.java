@@ -14,7 +14,6 @@ import java.util.logging.Logger;
  */
 @Component
 public class ControllerInterceptor extends HandlerInterceptorAdapter implements Loggable {
-
     @Override
     public boolean preHandle(
             HttpServletRequest request,

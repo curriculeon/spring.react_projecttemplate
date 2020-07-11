@@ -31,13 +31,12 @@ class CustomerForm extends Component {
         const { fname, lname, email } = this.state;
         const request = {
             method: 'POST',
-            body: {
+            body: JSON.stringify({
                 "firstName": fname,
                 "lastName": lname
-            },
+            }),
             headers: {"Content-Type": "application/json"}
         };
-        alert("Request = " + JSON.stringify(request));
         fetch("person/", request)
             .then((res) => res.json())
             .then((body)=> console.log(body));
