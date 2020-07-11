@@ -1,11 +1,12 @@
 package com.github.curriculeon.services;
 
-import com.github.curriculeon.repositories.PersonRepository;
 import com.github.curriculeon.models.Person;
+import com.github.curriculeon.repositories.PersonRepository;
+import com.github.curriculeon.utils.Loggable;
 import org.springframework.stereotype.Service;
 
 @Service
-public class PersonService {
+public class PersonService implements Loggable {
     private PersonRepository repository;
 
     public PersonService(PersonRepository repository) {
@@ -13,7 +14,10 @@ public class PersonService {
     }
 
     public Iterable<Person> index() {
-        return repository.findAll();
+        getLogger().info("Getting all person objects:");
+        Iterable<Person> result = repository.findAll();
+        result.forEach(person -> getLogger().info("\t\t" + person.asJsonString()));
+        return result;
     }
 
     public Person show(Long id) {
@@ -21,7 +25,10 @@ public class PersonService {
     }
 
     public Person create(Person person) {
-        return repository.save(person);
+        getLogger().info("Creating person:\n\t" + person.asJsonString());
+        Person result = repository.save(person);
+        getLogger().info("Successfully created person:\n\t" + person.asJsonString());
+        return result;
     }
 
     public Person update(Long id, Person newPersonData) {
