@@ -10,7 +10,7 @@
 
 ### Running Web Server
 * Open the project from `IntelliJ` using the `pom.xml` located at the root directory of this project.
-* Run the `MainApplication` to begin the Web Server.
+* Run the `MainApplication.java` to begin the Web Server.
 * If your application cannot run because something is occupying a port, use this command with the respective port number specified:
 * **OSX and Linux**
     * ``kill -kill `lsof -t -i tcp:8080` ``
