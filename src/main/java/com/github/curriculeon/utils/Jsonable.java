@@ -8,10 +8,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  */
 public interface Jsonable {
     default String asJsonString() {
-        try {
-            return new ObjectMapper().writeValueAsString(this);
-        } catch (JsonProcessingException e) {
-            throw new RuntimeException(e);
-        }
+        return Jsonifier.jsonify(this);
     }
 }

@@ -11,9 +11,6 @@
 ### Running Web Server
 * Open the project from `IntelliJ` using the `pom.xml` located at the root directory of this project.
 * Run the `MainApplication` to begin the Web Server.
-
-#### Testing Web Server via Postman
-* Launch the [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en) app and enter the URI `http://localhost:8080/` and hit Send.
 * If your application cannot run because something is occupying a port, use this command with the respective port number specified:
 * **OSX and Linux**
     * ``kill -kill `lsof -t -i tcp:8080` ``
@@ -21,7 +18,13 @@
     * _For use in command line_:
         * `for /f "tokens=5" %a in ('netstat -aon ^| find ":8080" ^| find "LISTENING"') do taskkill /f /pid %a`
     * _For use in bat-file_:
-        * `for /f "tokens=5" %%a in ('netstat -aon ^| find ":8080" ^| find "LISTENING"') do taskkill /f /pid %%a` 
+        * `for /f "tokens=5" %%a in ('netstat -aon ^| find ":8080" ^| find "LISTENING"') do taskkill /f /pid %%a`
+
+#### Testing Web Server via Browser
+* From a browser, navigate to `http://localhost:8080/h2-console/` and log into the database.
+
+#### Testing Web Server via Postman
+* Launch the [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en) app and enter the URI `http://localhost:8080/` and hit Send. 
 
 
 
@@ -62,7 +65,7 @@
 
 #### Part 4 - Check Build
 * Ensure that the tests run upon opening the project.
-    * You should see `Tests Failed: 99 of 99 tests`
+    * You should see `Tests Failed: ${number_of_tests} of ${number_of_tests} tests`
 
 
 
