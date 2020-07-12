@@ -19,16 +19,16 @@
     * ``kill -kill `lsof -t -i tcp:8080` ``
 * **Windows**
     * _For use in command line_:
-	* `for /f "tokens=5" %a in ('netstat -aon ^| find ":8080" ^| find "LISTENING"') do taskkill /f /pid %a`
+        * `for /f "tokens=5" %a in ('netstat -aon ^| find ":8080" ^| find "LISTENING"') do taskkill /f /pid %a`
     * _For use in bat-file_:
-	* `for /f "tokens=5" %%a in ('netstat -aon ^| find ":8080" ^| find "LISTENING"') do taskkill /f /pid %%a` 
+        * `for /f "tokens=5" %%a in ('netstat -aon ^| find ":8080" ^| find "LISTENING"') do taskkill /f /pid %%a` 
 
 
 
 
 ### Running Web Application
 1. ensure you [download NodeJS](https://nodejs.org/en/).
-	* The current version can be found here: `https://nodejs.org/en/`
+    * The current version can be found here: `https://nodejs.org/en/`
 2. Ensure once Node is downloaded, you [add it to your path variable](https://stackoverflow.com/a/27344046)
     * View this stack overflow post for how to modify environment variables: `https://stackoverflow.com/a/27344046`
     * For easy access to environment variblaes in window, execute the following from the `run` window (`Windows+R`)
