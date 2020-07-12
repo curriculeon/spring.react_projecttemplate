@@ -37,11 +37,14 @@ class CustomerForm extends Component {
         };
         fetch("person/", request)
             .then((res) => res.json())
-            .then((body)=> console.log(body));
+            .then((body)=> {
+              alert(JSON.stringify(body));
+              window.location.reload(false);
+            });
     }
 
       render() {
-        const { fname, lname, email } = this.state;
+        const { fname, lname } = this.state;
         return (
           <form>
             <label id="fname-label">First name:</label>
