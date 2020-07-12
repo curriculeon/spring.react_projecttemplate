@@ -33,8 +33,9 @@
 1. ensure you [download NodeJS](https://nodejs.org/en/).
     * The current version can be found here: `https://nodejs.org/en/`
 2. Ensure once Node is downloaded, you [add it to your path variable](https://stackoverflow.com/a/27344046)
-    * View this stack overflow post for how to modify environment variables: `https://stackoverflow.com/a/27344046`
-    * For easy access to environment variblaes in window, execute the following from the `run` window (`Windows+R`)
+    * View this stack overflow post for how to modify environment variables
+        * `https://stackoverflow.com/a/27344046`
+    * For easy access to environment variables in Windows OS, execute the following from the `run` window (`Windows+R`)
         * `rundll32.exe sysdm.cpl,EditEnvironmentVariables`
 3. from `Git Bash` navigate to the root directory of this project and execute `cd ./client`.
 4. From the `./client` directory, execute `npm install` to install `node_modules`.
