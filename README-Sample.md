@@ -12,7 +12,7 @@
 * Open the project from `IntelliJ` using the `pom.xml` located at the root directory of this project.
 * Run the `MainApplication` to begin the Web Server.
 
-#### Testing Web Server via Postman**
+#### Testing Web Server via Postman
 * Launch the [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en) app and enter the URI `http://localhost:8080/` and hit Send.
 * If your application cannot run because something is occupying a port, use this command with the respective port number specified:
 * **OSX and Linux**
