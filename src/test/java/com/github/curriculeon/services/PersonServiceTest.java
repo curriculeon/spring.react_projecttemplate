@@ -1,7 +1,7 @@
 package com.github.curriculeon.services;
 
 
-import com.github.curriculeon.MyApplication;
+import com.github.curriculeon.MainApplication;
 
 import com.github.curriculeon.controllers.PersonController;
 import com.github.curriculeon.models.Person;
@@ -18,7 +18,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
-@ContextConfiguration(classes = MyApplication.class)
+@ContextConfiguration(classes = MainApplication.class)
 public class PersonServiceTest {
     @MockBean
     private PersonService service;
