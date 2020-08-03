@@ -1,11 +1,11 @@
-drop table if exists PROFILES;
-drop table if exists country;
+DROP TABLE IF EXISTS profiles;
+DROP TABLE IF EXISTS country;
 
-create table PROFILES(
-  ID int not null AUTO_INCREMENT,
-  NAME varchar(100) not null,
-  STATUS int,
-  PRIMARY KEY ( ID )
+CREATE TABLE profiles(
+  id   INTEGER      NOT NULL AUTO_INCREMENT,
+  name VARCHAR(128) NOT NULL,
+  country_id int,
+  PRIMARY KEY ( id )
 );
 
 CREATE TABLE country (
