@@ -7,6 +7,8 @@
 
 
 ## How to Run The Application
+<img src = "./springreact-projecttemplate.gif">
+
 
 ### Running Web Server
 * Open the project from `IntelliJ` using the `pom.xml` located at the root directory of this project.
