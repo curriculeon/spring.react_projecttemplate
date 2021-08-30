@@ -32,15 +32,10 @@
 
 
 ### Running Web Application
-1. ensure you [download NodeJS](https://nodejs.org/en/).
+1. [Install NodeJs](https://curriculeon.github.io/Curriculeon/lectures/nodejs/installation/content.html)
     * The current version can be found here: `https://nodejs.org/en/`
-2. Ensure once Node is downloaded, you [add it to your path variable](https://stackoverflow.com/a/27344046)
-    * View this stack overflow post for how to modify environment variables
-        * `https://stackoverflow.com/a/27344046`
-    * For easy access to environment variables in Windows OS, execute the following from the `run` window (`Windows+R`)
-        * `rundll32.exe sysdm.cpl,EditEnvironmentVariables`
-3. from `Git Bash` navigate to the root directory of this project and execute `cd ./client`.
-4. From the `./client` directory, execute `npm install` to install `node_modules`.
+2. navigate to the root directory of this project and execute `cd ./client`.
+3. From the `./client` directory, execute `npm install` to install `node_modules`.
 5. After installing `node_modules` from `./client`, execute `npm start` to begin serving the Web Application.
 6. Navigate to `localhost:3000` to view the Web Application.
 
