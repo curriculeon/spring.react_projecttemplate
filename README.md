@@ -26,7 +26,7 @@
 * From a browser, navigate to `http://localhost:8080/h2-console/` and log into the database.
 
 #### Testing Web Server via Postman
-* Launch the [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en) app and enter the URI `http://localhost:8080/` and hit Send. 
+* Launch the [Postman](https://curriculeon.github.io/Curriculeon/lectures/java/web/postman/installation/content.html) app and enter the URI `http://localhost:8080/` and hit Send. 
 
 
 
