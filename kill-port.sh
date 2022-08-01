@@ -1,16 +1,19 @@
 #!/bin/bash
 if [ "$1" ]
-then
+  then
     portNumbers=$(netstat -a -n -b -o | grep $1 | sed -e "s/[[:space:]]\+/ /g" | cut -d ' ' -f6)        
-    { #try 
-        for portNumber in $portNumbers; do
-            echo taskkill //F //PID "$portNumber"
+    echo "Attempting to kill process running port number $1"
+    for portNumber in $portNumbers; do
+      { #try 
+          echo "Attempting to kill process running port number $1 using CYGWIN syntax"
             taskkill //F //PID "$portNumber"
-        done 
-    } || { # catch
-        for portNumber in $portNumbers; do
-            echo taskkill /PID /F "$portNumber" 2>/dev/null
-            taskkill /PID /F "$portNumber" 2>/dev/null
-        done 
-    }
+          echo "Process on $1 killed."
+      } || { # catch
+          echo "Attempting to kill process running port number $1 using BASH syntax"        
+            taskkill /F /PID "$portNumber" 
+          echo "Process on $1 killed."
+      } || {
+          echo "Process on $1 NOT killed."
+      }
+    done 
 fi
