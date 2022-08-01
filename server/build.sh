@@ -2,8 +2,7 @@ portNumber=8080
 echo "Starting web application"
 
 echo "Killing process on $portNumber..."
-powershell ../kill-port.ps1 $portNumber
-kill -kill `lsof -t -i tcp:$portNumber` 2>&1
+../kill-port.sh $portNumber
 echo "Process on $portNumber killed."
 
 echo "Rebuilding class files..."
