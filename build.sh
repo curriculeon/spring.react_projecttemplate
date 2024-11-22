@@ -1,6 +1,6 @@
 echo "Building application..."
-cd ./server
-./build.sh &
+cd ./client
+./build.sh
 
-cd ../client
-./build.sh &
+cd ../server
+./build.sh
